@@ -1,0 +1,44 @@
+ALGORITHM phraselength
+VAR
+    str:STRING;
+    length : INTEGER;
+
+BEGIN
+    write("donner une phrase")
+    read(str)
+    length:=str.length
+    write("la langeur du phrase est : ",length)
+END
+
+ALGORITHM words
+VAR
+       wlength
+BEGIN
+    write("donner une phrase")
+    read(str)
+    FOR i FROM 1 TO str.length STEP step  DO
+        if(str[i]=""){
+            wlength=wlenght+1
+        }
+    END_FOR
+    write("votre phrase contient ",wlenght," mots")
+END
+
+ALGORITHM Vowels
+VAR
+    vcount:INTEGER;
+    vlist="aieuoy";
+    i,j:INTEGER;
+BEGIN
+      
+    write("donner une phrase")
+    read(str)
+    FOR i FROM 1 TO str.length STEP step  DO
+    FOR j FROM 1 TO vlist.length STEP step  DO
+        if(str[i]=vlist[j]){
+            vcount:=vcount+1
+        }
+    END_FOR
+    END_FOR
+    write("nombre des voyelles est",vcount)
+END
